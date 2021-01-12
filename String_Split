@@ -1,0 +1,4 @@
+declare @char varchar(50) = 'P|RESISTENCIA DE DEGELO P/EVAP. 2000W 110V 220V'
+
+select string_agg(value, ' | ') from STRING_SPLIT(@char, ' ') where value = '220V' --or value = '110V'
+
